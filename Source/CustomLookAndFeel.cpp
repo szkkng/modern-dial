@@ -77,7 +77,7 @@ juce::Label* CustomLookAndFeel::createSliderTextBox (juce::Slider& slider)
 {
     auto* l = new juce::Label();
     
-    l->setFont (17.0f);
+    l->setFont (16.0f);
     l->setJustificationType (juce::Justification::centred);
     l->setColour (juce::Label::textColourId, slider.findColour (juce::Slider::textBoxTextColourId));
     l->setColour (juce::Label::textWhenEditingColourId, slider.findColour (juce::Slider::textBoxTextColourId));
