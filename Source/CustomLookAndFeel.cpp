@@ -67,10 +67,10 @@ void CustomLookAndFeel::drawRotarySlider (juce::Graphics& g, int x, int y, int w
     
     thumb.addRectangle (-thumbWidth / 2, -thumbWidth / 2, thumbWidth, radius + lineW);
     
-    g.setColour (offWhite);
+    g.setColour (creamWhite);
     g.fillPath (thumb, juce::AffineTransform::rotation (toAngle + 3.12f).translated (bounds.getCentre()));
 
-    g.fillEllipse (bounds.reduced (radius * 0.28));
+    g.fillEllipse (bounds.reduced (radius * 0.25));
 }
 
 juce::Label* CustomLookAndFeel::createSliderTextBox (juce::Slider& slider)
