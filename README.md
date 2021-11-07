@@ -8,5 +8,4 @@ $ git clone https://github.com/szkkng/ModernDial.git
 ```
 
 ## Tutorial
-https://suzuki-kengo.net/dial-customization/
-
+https://suzuki-kengo.dev/posts/dial-customization
