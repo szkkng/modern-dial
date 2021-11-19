@@ -10,7 +10,12 @@
 
 #include "CustomLookAndFeel.h"
 
-CustomLookAndFeel::CustomLookAndFeel() {};
+CustomLookAndFeel::CustomLookAndFeel()
+{
+    auto futuraMediumFont = juce::Typeface::createSystemTypefaceFor (FuturaMedium::FuturaMedium_otf, FuturaMedium::FuturaMedium_otfSize);
+    setDefaultSansSerifTypeface (futuraMediumFont);
+};
+
 CustomLookAndFeel::~CustomLookAndFeel() {};
 
 juce::Slider::SliderLayout CustomLookAndFeel::getSliderLayout (juce::Slider& slider)
@@ -19,7 +24,7 @@ juce::Slider::SliderLayout CustomLookAndFeel::getSliderLayout (juce::Slider& sli
     
     juce::Slider::SliderLayout layout;
 
-    layout.textBoxBounds = localBounds;
+    layout.textBoxBounds = localBounds.withY (-1);
     layout.sliderBounds = localBounds;
 
     return layout;

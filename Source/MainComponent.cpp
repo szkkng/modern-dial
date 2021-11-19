@@ -5,7 +5,8 @@ MainComponent::MainComponent()
 {
     setSize (600, 400);
     setWantsKeyboardFocus (true);
-    
+    juce::LookAndFeel::setDefaultLookAndFeel (&customLookAndFeel);
+
     blueDial.setColour (juce::Slider::rotarySliderFillColourId, blue);
     greenDial.setColour (juce::Slider::rotarySliderFillColourId, green);
     yellowDial.setColour (juce::Slider::rotarySliderFillColourId, yellow);
@@ -17,6 +18,7 @@ MainComponent::MainComponent()
 
 MainComponent::~MainComponent()
 {
+    juce::LookAndFeel::setDefaultLookAndFeel (nullptr);
 }
 
 //==============================================================================

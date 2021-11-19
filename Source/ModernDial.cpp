@@ -39,6 +39,7 @@ ModernDial::ModernDial()
 
 ModernDial::~ModernDial()
 {
+    setLookAndFeel (nullptr);
 }
 
 void ModernDial::paint (juce::Graphics& g)
