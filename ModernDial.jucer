@@ -3,6 +3,13 @@
 <JUCERPROJECT id="YkbceH" name="DialDesign" projectType="guiapp" useAppConfig="0"
               addUsingNamespaceToJuceHeader="0" displaySplashScreen="1" jucerFormatVersion="1">
   <MAINGROUP id="uCPMiH" name="DialDesign">
+    <GROUP id="{A7AB7F35-994A-B636-E9A9-741D9B593989}" name="Resources">
+      <FILE id="f9cu16" name="Futura-Medium.otf" compile="0" resource="1"
+            file="Resources/Futura-Medium.otf"/>
+      <FILE id="POpprJ" name="FuturaMedium.cpp" compile="1" resource="0"
+            file="Resources/FuturaMedium.cpp"/>
+      <FILE id="EDdubv" name="FuturaMedium.h" compile="0" resource="0" file="Resources/FuturaMedium.h"/>
+    </GROUP>
     <GROUP id="{420FE51C-3EC6-D5A1-71F4-351542A59865}" name="Source">
       <FILE id="FskS4q" name="CustomLookAndFeel.cpp" compile="1" resource="0"
             file="Source/CustomLookAndFeel.cpp"/>
