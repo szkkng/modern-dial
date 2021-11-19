@@ -7,9 +7,9 @@ MainComponent::MainComponent()
     setWantsKeyboardFocus (true);
     juce::LookAndFeel::setDefaultLookAndFeel (&customLookAndFeel);
 
-    blueDial.setColour (juce::Slider::rotarySliderFillColourId, blue);
-    greenDial.setColour (juce::Slider::rotarySliderFillColourId, green);
-    yellowDial.setColour (juce::Slider::rotarySliderFillColourId, yellow);
+    blueDial.setColour (juce::Slider::rotarySliderFillColourId, CustomColours::blue);
+    greenDial.setColour (juce::Slider::rotarySliderFillColourId, CustomColours::green);
+    yellowDial.setColour (juce::Slider::rotarySliderFillColourId, CustomColours::yellow);
     
     addAndMakeVisible (blueDial);
     addAndMakeVisible (greenDial);
@@ -24,7 +24,7 @@ MainComponent::~MainComponent()
 //==============================================================================
 void MainComponent::paint (juce::Graphics& g)
 {
-    g.fillAll (black);
+    g.fillAll (CustomColours::black);
 }
 
 void MainComponent::resized()

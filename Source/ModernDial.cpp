@@ -16,8 +16,8 @@ ModernDial::ModernDial()
     setRotaryParameters (juce::MathConstants<float>::pi * 1.25f,
                          juce::MathConstants<float>::pi * 2.75f,
                          true);
-    setColour (juce::Slider::textBoxTextColourId, blackGrey);
-    setColour (juce::Slider::textBoxOutlineColourId, grey);
+    setColour (juce::Slider::textBoxTextColourId,    CustomColours::blackGrey);
+    setColour (juce::Slider::textBoxOutlineColourId, CustomColours::grey);
     setLookAndFeel (&customLookAndFeel);
     setVelocityBasedMode (true);
     setVelocityModeParameters (0.5, 1, 0.09, false);

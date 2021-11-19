@@ -12,6 +12,7 @@
 
 #include <JuceHeader.h>
 #include "CustomLookAndFeel.h"
+#include "CustomColours.h"
 
 class ModernDial  : public juce::Slider
 {
@@ -26,9 +27,4 @@ public:
     
 private:
     CustomLookAndFeel customLookAndFeel;
-    
-    juce::Colour grey      = juce::Colour::fromFloatRGBA (0.42f, 0.42f, 0.42f, 1.0f);
-    juce::Colour blackGrey = juce::Colour::fromFloatRGBA (0.2f,  0.2f,  0.2f, 1.0f);
-    
-    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (ModernDial)
 };
