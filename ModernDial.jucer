@@ -11,6 +11,7 @@
       <FILE id="EDdubv" name="FuturaMedium.h" compile="0" resource="0" file="Resources/FuturaMedium.h"/>
     </GROUP>
     <GROUP id="{420FE51C-3EC6-D5A1-71F4-351542A59865}" name="Source">
+      <FILE id="ud8M6k" name="CustomColours.h" compile="0" resource="0" file="Source/CustomColours.h"/>
       <FILE id="FskS4q" name="CustomLookAndFeel.cpp" compile="1" resource="0"
             file="Source/CustomLookAndFeel.cpp"/>
       <FILE id="aJyrTU" name="CustomLookAndFeel.h" compile="0" resource="0"

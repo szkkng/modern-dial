@@ -51,7 +51,7 @@ void CustomLookAndFeel::drawRotarySlider (juce::Graphics& g, int x, int y, int w
                                  rotaryEndAngle,
                                  true);
     
-    g.setColour (blackGrey);
+    g.setColour (CustomColours::blackGrey);
     g.strokePath (backgroundArc, juce::PathStrokeType (lineW, juce::PathStrokeType::curved, juce::PathStrokeType::rounded));
     
     juce::Path valueArc;
@@ -72,7 +72,7 @@ void CustomLookAndFeel::drawRotarySlider (juce::Graphics& g, int x, int y, int w
     
     thumb.addRectangle (-thumbWidth / 2, -thumbWidth / 2, thumbWidth, radius + lineW);
     
-    g.setColour (creamWhite);
+    g.setColour (CustomColours::creamWhite);
     g.fillPath (thumb, juce::AffineTransform::rotation (toAngle + 3.12f).translated (bounds.getCentre()));
 
     g.fillEllipse (bounds.reduced (radius * 0.25));
