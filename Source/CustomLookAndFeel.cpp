@@ -10,6 +10,8 @@
 
 #include "CustomLookAndFeel.h"
 
+juce::String CustomLookAndFeel::CustomLabel::initialPressedKey = "";
+
 CustomLookAndFeel::CustomLookAndFeel()
 {
     auto futuraMediumFont = juce::Typeface::createSystemTypefaceFor (FuturaMedium::FuturaMedium_otf, FuturaMedium::FuturaMedium_otfSize);
@@ -78,16 +80,25 @@ void CustomLookAndFeel::drawRotarySlider (juce::Graphics& g, int x, int y, int w
     g.fillEllipse (bounds.reduced (radius * 0.25));
 }
 
-juce::Label* CustomLookAndFeel::createSliderTextBox (juce::Slider& slider)
+CustomLookAndFeel::CustomLabel* CustomLookAndFeel::createSliderTextBox (juce::Slider& slider)
 {
-    auto* l = new juce::Label();
-    
-    l->setFont (16.0f);
+    auto* l = new CustomLabel();
+
     l->setJustificationType (juce::Justification::centred);
     l->setColour (juce::Label::textColourId, slider.findColour (juce::Slider::textBoxTextColourId));
     l->setColour (juce::Label::textWhenEditingColourId, slider.findColour (juce::Slider::textBoxTextColourId));
-    l->setColour (juce::Label::outlineWhenEditingColourId, slider.findColour (juce::Slider::textBoxOutlineColourId));
+    l->setColour (juce::Label::outlineWhenEditingColourId, juce::Colours::transparentWhite);
     l->setInterceptsMouseClicks (false, false);
-    
+    l->setFont (16.0f);
+
     return l;
+}
+
+juce::CaretComponent* CustomLookAndFeel::createCaretComponent (juce::Component* keyFocusOwner)
+{
+    auto caret = new juce::CaretComponent (keyFocusOwner);
+
+    caret->setColour (juce::CaretComponent::caretColourId, juce::Colours::red);
+
+    return caret;
 }
