@@ -46,7 +46,7 @@ void ModernDial::paint (juce::Graphics& g)
 {
     juce::Slider::paint (g);
 
-    if (hasKeyboardFocus (false))
+    if (hasKeyboardFocus (true))
     {
         auto bounds = getLocalBounds().toFloat();
         auto len    = juce::jmin (bounds.getHeight(), bounds.getWidth()) * 0.07f;
@@ -103,4 +103,22 @@ void ModernDial::mouseUp (const juce::MouseEvent& event)
     juce::Desktop::getInstance().getMainMouseSource().setScreenPosition (event.source.getLastMouseDownPosition());
     
     setMouseCursor (juce::MouseCursor::NormalCursor);
+}
+
+bool ModernDial::keyPressed (const juce::KeyPress& k)
+{
+    char numChars[] = "0123456789";
+
+    for (auto numChar : numChars)
+    {
+        if (k.isKeyCode (numChar))
+        {
+            CustomLookAndFeel::CustomLabel::initialPressedKey = juce::String::charToString (numChar);
+            showTextBox();
+
+            return true;
+        }
+    }
+
+    return false;
 }
