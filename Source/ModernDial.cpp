@@ -20,7 +20,6 @@ ModernDial::ModernDial()
     setColour (juce::Slider::textBoxOutlineColourId, CustomColours::grey);
     setLookAndFeel (&customLookAndFeel);
     setVelocityBasedMode (true);
-    setVelocityModeParameters (0.5, 1, 0.09, false);
     setRange (0.0, 100.0, 0.01);
     setValue (50.0);
     setDoubleClickReturnValue (true, 50.0);
@@ -94,6 +93,16 @@ void ModernDial::mouseDown (const juce::MouseEvent& event)
     juce::Slider::mouseDown (event);
 
     setMouseCursor (juce::MouseCursor::NoCursor);
+}
+
+void ModernDial::mouseDrag (const juce::MouseEvent& event)
+{
+    juce::Slider::mouseDrag (event);
+
+    if (event.mods.isShiftDown())
+        setVelocityModeParameters (0.1, 1, 0.1, false);
+    else
+        setVelocityModeParameters (1.0, 1, 0.1, false);
 }
 
 void ModernDial::mouseUp (const juce::MouseEvent& event)

@@ -23,6 +23,7 @@ public:
     void paint (juce::Graphics& g) override;
     
     void mouseDown (const juce::MouseEvent& event) override;
+    void mouseDrag (const juce::MouseEvent& event) override;
     void mouseUp (const juce::MouseEvent& event) override;
     
     bool keyPressed (const juce::KeyPress& k) override;
