@@ -29,5 +29,7 @@ public:
     bool keyPressed (const juce::KeyPress& k) override;
     
 private:
+    void drawFocusMark (juce::Graphics& g, juce::Colour colour);
+    
     CustomLookAndFeel customLookAndFeel;
 };
