@@ -114,17 +114,12 @@ void ModernDial::mouseUp (const juce::MouseEvent& event)
 
 bool ModernDial::keyPressed (const juce::KeyPress& k)
 {
-    char numChars[] = "0123456789";
-
-    for (auto numChar : numChars)
+    if ('0' <= k.getKeyCode() && k.getKeyCode() <= '9')
     {
-        if (k.isKeyCode (numChar))
-        {
-            CustomLookAndFeel::CustomLabel::initialPressedKey = juce::String::charToString (numChar);
-            showTextBox();
+        CustomLookAndFeel::CustomLabel::initialValue = juce::String::charToString (k.getTextCharacter());
+        showTextBox();
 
-            return true;
-        }
+        return true;
     }
 
     return false;

@@ -10,7 +10,7 @@
 
 #include "CustomLookAndFeel.h"
 
-juce::String CustomLookAndFeel::CustomLabel::initialPressedKey = "";
+juce::String CustomLookAndFeel::CustomLabel::initialValue = "";
 
 CustomLookAndFeel::CustomLookAndFeel()
 {
